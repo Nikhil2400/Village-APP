@@ -1,0 +1,107 @@
+.admin-education-container {
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+}
+
+h1, h3 {
+  text-align: center;
+  color: #2c6a2c;
+}
+
+.education-form {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.education-form input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.education-form button {
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.upload-section input {
+  display: block;
+  margin: 10px auto;
+}
+
+.upload-section button {
+  background: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  flex: 1 1 200px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.gallery-preview img,
+.gallery-preview video {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-preview button {
+  display: block;
+  margin: 5px auto;
+  padding: 5px 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .education-form {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+  }
+
+  .gallery-preview img,
+  .gallery-preview video {
+    max-height: 200px;
+  }
+}

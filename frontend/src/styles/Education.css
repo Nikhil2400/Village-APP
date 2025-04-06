@@ -1,0 +1,118 @@
+.edu-page {
+    padding: 20px;
+    background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+  }
+  
+  .edu-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #004d40;
+    margin-bottom: 40px;
+    animation: slideDown 1s ease-out;
+  }
+  
+  .edu-section {
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .edu-info {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 10px 20px;
+  }
+  
+  .edu-info p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .edu-info span {
+    font-weight: bold;
+    color: #00695c;
+  }
+  
+  .edu-gallery h4 {
+    margin: 30px 0 10px;
+    color: #00796b;
+    font-size: 1.2rem;
+  }
+  
+  .gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 0 20px;
+  }
+  .gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  /* 🎨 Image Styling */
+  .gallery-flex img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 22px;
+    transition: transform 0.3s ease;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  /* 📽 Video Styling */
+  .gallery-flex video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .gallery-flex video:hover {
+    transform: scale(1.03);
+  }
+  
+  .edu-divider {
+    border: none;
+    height: 3px;
+    margin: 40px 0;
+    background: linear-gradient(to right, #004d40, transparent);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .edu-title {
+      font-size: 2rem;
+    }
+  
+    .gallery-flex img,
+    .gallery-flex video {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .edu-info {
+      padding: 10px;
+    }
+  }
+  

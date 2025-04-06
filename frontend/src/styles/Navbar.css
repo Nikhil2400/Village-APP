@@ -1,0 +1,130 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px;
+  background: url('../assets/nev.avif') no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 110px;  /* Adjust height as needed */
+  position: relative;
+  top: px;  /* Moves navbar down */
+}
+
+/* If you want the navbar to expand when hovered */
+
+
+/* ✅ Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ✅ Each Navigation Item */
+.nav-links li {
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ Link & Button Styles */
+.nav-links a, .nav-links button {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links a:hover, .nav-links button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+.account-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.account-icon {
+  font-size: 24px;
+  color: #333;
+}
+
+/* ✅ Material-UI Dropdown Menu Styling */
+.MuiMenu-paper {
+  background-color: #212020 !important;
+  color: white !important;
+}
+
+.MuiMenuItem-root a {
+  color: white;
+  text-decoration: none;
+}
+
+.MuiMenuItem-root a:hover {
+  background-color: #130e0e;
+}
+
+/* ✅ Navbar Button Text Styling */
+.navbar a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: white;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #ffcc00; /* Changes color on hover */
+}
+/* ✅ Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* ✅ Show Menu Icon on Mobile */
+@media screen and (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 320px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(90, 74, 74, 0.8);
+    padding: 10px;
+  }
+
+  .nav-links.mobile-active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+}

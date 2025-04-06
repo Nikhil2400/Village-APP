@@ -1,0 +1,22 @@
+.back-button {
+    position: sticky;
+    top: 0px;
+    left: 500px;
+    z-index: 999;
+    background-color: rgb(222, 187, 118);
+    border-radius: 60%;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(203, 179, 179, 0.2);
+    cursor: pointer;
+    width: 45px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    transform: scale(1.1);
+  }
+  

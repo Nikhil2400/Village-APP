@@ -1,0 +1,28 @@
+.nav-sidebar {
+    position: fixed;
+    left: -250px;
+    top: 60px;
+    width: 200px;
+    height: calc(100vh - 60px);
+    background-color: #1a202c;
+    padding: 10px;
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+  
+  .nav-sidebar.open {
+    left: 0;
+  }
+  
+  .nav-sidebar a {
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .nav-sidebar a:hover {
+    background-color: #2d3748;
+  }
+  

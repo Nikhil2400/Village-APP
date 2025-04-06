@@ -1,0 +1,44 @@
+{
+    "welcome": "आपका स्वागत है",
+    "login": "लॉग इन करें",
+    "register": "पंजीकरण",
+    "title.health": "स्वास्थ्य",
+    "title.hospitals": "अस्पताल",
+    "title.govSchemes": "सरकारी योजनाएँ",
+    "title.pmSchemes": "प्रधानमंत्री योजनाएँ",
+    "title.socialApps": "सामाजिक ऐप्स",
+    "title.gramSabha": "ग्राम सभा",
+    "title.rules": "नियम और विनियम",
+    "title.members": "सदस्य",
+    "title.notice": "सूचना",
+    "title.complaints": "शिकायत बॉक्स",
+    "title.payments": "भुगतान",
+    "title.farmerForm": "किसान फॉर्म",
+    "title.tourism": "पर्यटन स्थल",
+    "title.liveTv": "लाइव टीवी",
+    "title.gallery": "गैलरी",
+    "title.calendar": "कैलेंडर",
+    
+    "importantLinks.title": "महत्वपूर्ण लिंक",
+    "importantLinks.1": "प्रधानमंत्री आवास योजना - ग्रामीण",
+    "importantLinks.2": "मनरेगा - महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी योजना",
+    "importantLinks.3": "स्वच्छ भारत मिशन - ग्रामीण",
+    "importantLinks.4": "स्मार्ट विलेज इनिशिएटिव",
+    
+    "importantSchemes.title": "महत्वपूर्ण योजनाएँ",
+    "importantSchemes.1": "ग्राम पंचायतों के लिए डिजिटल इंडिया मिशन",
+    "importantSchemes.2": "जल जीवन मिशन (जल आपूर्ति)",
+    "importantSchemes.3": "सौर ऊर्जा योजना",
+    "importantSchemes.4": "प्रधानमंत्री किसान सम्मान निधि",
+    "importantSchemes.5": "कृषि यंत्रीकरण योजना",
+    
+    "rules.title": "ग्राम पंचायत नियम",
+    "rules.1": "हर तीन महीने में ग्रामसभा आयोजित करना अनिवार्य है।",
+    "rules.2": "ग्राम पंचायत निधि का सही उपयोग आवश्यक है।",
+    "rules.3": "स्वच्छता और पर्यावरण संरक्षण के लिए ग्रामवासियों का सहयोग आवश्यक है।",
+    "rules.4": "ग्राम पंचायत निर्णय प्रक्रिया में पारदर्शिता होनी चाहिए।",
+    "rules.5": "विद्यालयों, अस्पतालों और अन्य सार्वजनिक सेवाओं का नियमित रखरखाव आवश्यक है।",
+    
+    "connect.title": "हमसे जुड़ें"
+  }
+  

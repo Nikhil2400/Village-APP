@@ -1,0 +1,55 @@
+.user-management {
+    padding: 20px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 22px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .edit-btn {
+    background-color: #4caf50;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+  }
+  
+  .edit-form {
+    margin-top: 20px;
+  }
+  
+  .edit-form input,
+  .edit-form select {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .save-btn {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .cancel-btn {
+    background-color: #f44336;
+    color: #fff;
+  }
+  

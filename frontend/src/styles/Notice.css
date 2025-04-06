@@ -1,0 +1,101 @@
+/* Notice.css */
+
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* Notice Title */
+.notice-title {
+  font-weight: bold;
+  color: #1565c0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Notice Paper Card */
+.notice-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-left: 6px solid #1565c0;
+}
+
+.notice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Notice Content */
+.notice-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Notice Icon */
+.notice-icon {
+  color: #1565c0;
+  font-size: 30px;
+}
+
+/* Notice Text */
+.notice-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Notice Description */
+.notice-description {
+  color: #424242;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Notice Date */
+.notice-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #757575;
+  font-size: 14px;
+}
+
+/* Attached File Link */
+.notice-file {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ff9800;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.notice-file:hover {
+  text-decoration: underline;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* No Notices Message */
+.no-notices {
+  text-align: center;
+  font-size: 18px;
+  color: #757575;
+}

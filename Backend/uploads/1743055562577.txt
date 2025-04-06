@@ -1,0 +1,12 @@
+
+      Donation Receipt
+      -------------------------
+      Name: nikhil
+      Phone: 2345654345
+      Donation Type: Kachara Nidhi
+      Amount: ₹2
+      Transaction ID: pay_QBNwKbvI8P0mwu
+      Date: 3/26/2025, 3:25:22 AM
+      -------------------------
+      Thank you for your donation!
+    

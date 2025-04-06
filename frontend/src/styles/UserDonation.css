@@ -1,0 +1,94 @@
+.donation-container {
+    max-width: 350px;
+    margin: 40px auto;
+    padding: 80px;
+    background: #e8c3b0;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #573014;
+  }
+  
+  .form-group {
+    margin: 15px 0;
+  }
+  
+  .select-box {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #a33939;
+  }
+  
+  .amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .donate-btn {
+    width: 100%;
+    background-color: #ff6600;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .donate-btn:hover {
+    background-color: #e65c00;
+  }
+  
+  .receipt-section {
+    margin-top: 20px;
+    padding: 10px;
+    background: #dff0d8;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .success-msg {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d7b2d;
+  }
+  
+  .download-btn {
+    background: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .download-btn:hover {
+    background: #218838;
+  }
+  

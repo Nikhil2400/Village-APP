@@ -1,0 +1,56 @@
+/* ✅ Full Header Styling */
+.header-container {
+  width: 200%;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Running Text (Marquee) */
+.running-text {
+  background-color: #211b0f;
+  color: #f4e9e9;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ✅ Navigation Bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("../assets/002.jpg"); /* ✅ Background image */
+  background-size: cover;
+  background-position: center;
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(86, 76, 76, 0.2);
+}
+
+/* ✅ Images Section */
+img {
+  max-width: 100px;  /* Adjust as needed */
+  max-height: 50px;  /* Adjust as needed */
+  object-fit: contain; /* Ensures the whole image is visible */
+}
+
+
+.nav-logo {
+  height: 0.2px; /* Match the social media icons */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.nav-image {
+  height: 0.2px; /* Match the social media icons */
+  width: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* ✅ Site Title */
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+

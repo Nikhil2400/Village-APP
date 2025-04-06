@@ -1,0 +1,61 @@
+.gallery-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Center content horizontally */
+  gap: 20px;
+}
+
+.file-input {
+  margin-bottom: 10px;
+  width: 100%; /* ✅ Ensure input takes full width */
+  max-width: 400px;
+}
+
+.upload-btn {
+  margin-bottom: 20px;
+  width: 100%; /* ✅ Ensure button takes full width */
+  max-width: 200px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ✅ Responsive grid */
+  gap: 20px;
+  width: 100%; /* ✅ Take full width */
+}
+
+.gallery-card {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ✅ Add soft shadow */
+  border-radius: 12px; /* ✅ Rounded corners */
+  overflow: hidden; /* ✅ Ensure content fits inside */
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px); /* ✅ Lift effect on hover */
+}
+
+.card-media {
+  height: 200px;
+  width: 100%; /* ✅ Ensure media takes full width */
+  object-fit: cover; /* ✅ Maintain aspect ratio */
+}
+
+.card-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  background-color: #f44336;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}

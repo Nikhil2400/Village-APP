@@ -1,0 +1,85 @@
+/* UserProfile.css */
+
+.profile-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .profile-container p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .reset-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  
+  .reset-btn:hover {
+    background-color: #2c3e91;
+  }
+  
+  .reset-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .reset-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .reset-form button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .reset-form button[type="button"] {
+    background-color: #e74c3c;
+  }
+  
+  .reset-form button:hover {
+    opacity: 0.9;
+  }
+  
+  .message {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  

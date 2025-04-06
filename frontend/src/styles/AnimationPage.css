@@ -1,0 +1,43 @@
+.animation-wrapper {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #42a5f5, #1976d2);
+    margin-bottom: 30px;
+    box-shadow: 0 0 50px rgba(25, 118, 210, 0.5);
+  }
+  
+  .animated-title {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .enter-button {
+    padding: 12px 30px;
+    background-color: #0d47a1;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .enter-button:hover {
+    background-color: #1565c0;
+  }
+  

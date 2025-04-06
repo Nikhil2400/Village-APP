@@ -1,0 +1,46 @@
+{
+    "welcome": "Welcome",
+    "login": "Login",
+    "register": "Register",
+    "title.health": "Health",
+    "title.hospitals": "Hospitals",
+    "title.govSchemes": "Gov Schemes",
+    "title.pmSchemes": "PM Schemes",
+    "title.socialApps": "Social Apps",
+    "title.gramSabha": "Gram Sabha",
+    "title.rules": "Rules And Regulations",
+    "title.members": "Members",
+    "title.notice": "Notice",
+    "title.complaints": "Complaint Box",
+    "title.payments": "Payments",
+    "title.farmerForm": "Farmer form",
+    "title.tourism": "Tourist Places",
+    "title.liveTv": "Live Tv",
+    "title.gallery": "Gallery",
+    "title.calendar": "Calendar",
+  
+    "importantLinks.title": "Important Links",
+    "importantLinks.1": "PM Awas Yojana - Gramin",
+    "importantLinks.2": "MGNREGA - Mahatma Gandhi National Rural Employment Guarantee Scheme",
+    "importantLinks.3": "Swachh Bharat Mission - Gramin",
+    "importantLinks.4": "Smart Village Initiative",
+  
+    "importantSchemes.title": "Important Schemes",
+    "importantSchemes.1": "Digital India Mission for Gram Panchayats",
+    "importantSchemes.2": "Jal Jeevan Mission (Water Supply)",
+    "importantSchemes.3": "Solar Energy Scheme",
+    "importantSchemes.4": "PM Kisan Samman Nidhi",
+    "importantSchemes.5": "Agricultural Mechanization Scheme",
+  
+    "rules.title": "Gram Panchayat Rules",
+    "rules.1": "Gram Sabha must be conducted every three months.",
+    "rules.2": "Proper utilization of Gram Panchayat funds is essential.",
+    "rules.3": "Villagers' cooperation is needed for cleanliness and environmental protection.",
+    "rules.4": "Transparency in Gram Panchayat decision-making is required.",
+    "rules.5": "Regular maintenance of schools, hospitals, and other public services is necessary.",
+  
+    "connect.title": "Connect with Us"
+    
+    
+  }
+  

@@ -1,0 +1,45 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .social-icons a {
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-logo {
+    width: 40px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer running text style */
+  .footer .running-text {
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 0;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scrollText 20s linear infinite;
+  }
+  
+  /* Optional scrolling animation */
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

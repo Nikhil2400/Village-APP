@@ -1,0 +1,85 @@
+/* 🌟 AboutHealth Page Styling */
+
+.about-health-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #849f64;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.about-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-card {
+    background: linear-gradient(135deg, #7f6d91, #8cabdf);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h6 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.about-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.health-topic-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 0;
+}
+
+.health-accordion {
+    background-color: #aab9c8;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.health-accordion:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.health-list {
+    padding-left: 20px;
+}
+
+.health-list li {
+    font-size: 16px;
+    padding: 5px 0;
+    list-style-type: "• ";
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.health-list li:hover {
+    color: #9faec9;
+    font-weight: bold;
+}
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

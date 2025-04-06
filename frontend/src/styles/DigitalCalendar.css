@@ -1,0 +1,77 @@
+/* .calendar-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #b0becb;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+} */
+
+h2 {
+    color: #1d241b;
+    margin-bottom: 40px;
+}
+
+.calendar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* React Calendar Custom Styling */
+.custom-calendar {
+    max-width: 100%;
+    border: none;
+    background: rgb(245, 140, 11);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding:20px;
+}
+
+/* Ensure dates are visible */
+.react-calendar__tile {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Highlight selected date */
+.react-calendar__tile--active {
+    background: #e9eaec !important;
+    color: rgb(166, 131, 131);
+    font-weight: bold;
+}
+
+/* Events List */
+.event-list {
+    background: rgb(213, 185, 185);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-list li {
+    padding: 10px;
+    background: #4a6285;
+    color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.event-list li:hover {
+    transform: scale(1.05);
+    background: #218838;
+}
+
+.event-date {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-left: 5px;
+}

@@ -1,0 +1,27 @@
+.admin-container, .user-container {
+    text-align: center;
+    padding: 20px;
+}
+.pdf-list, .pdf-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.pdf-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.pdf-box:hover {
+    background: lightblue;
+}
+.pdf-box img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin-top: 10px;
+}
