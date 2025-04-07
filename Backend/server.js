@@ -66,7 +66,9 @@ app.use("/", userProfileRoutes); // ✅ Use the route
 const educationRoutes = require('./routes/educationRoutes');
 app.use('/api/education', educationRoutes);
 
-
+app.get("/", (req, res) => {
+    res.send("🚀 Village App Backend is Running ✅");
+  });
 
 const PORT = 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
