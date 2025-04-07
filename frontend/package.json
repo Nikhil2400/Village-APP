@@ -61,5 +61,8 @@
       "last 2 firefox versions",
       "last 2 safari versions"
     ]
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
   }
 }
