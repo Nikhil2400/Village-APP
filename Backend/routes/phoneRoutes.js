@@ -52,7 +52,7 @@ router.delete('/delete-number/:id', (req, res) => {
 /**
  * 📌 Send message to selected recipients
  */
-router.post('/send-message', async (req, res) => {
+router.post('/api/send-message', async (req, res) => {
   const { numbers, message } = req.body;
   if (!message || !Array.isArray(numbers) || numbers.length === 0) {
     return res.status(400).json({ success: false, message: 'Message and recipients are required' });
