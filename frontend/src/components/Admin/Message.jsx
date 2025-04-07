@@ -17,6 +17,8 @@ import {
 import { Edit, Delete } from '@mui/icons-material';
 import "../../styles/Message.css";
 
+const BASE_URL = 'http://52.66.183.128:5000/api';
+
 const Message = () => {
   const [numbers, setNumbers] = useState([]);
   const [selectedNumbers, setSelectedNumbers] = useState([]);
@@ -31,31 +33,31 @@ const Message = () => {
     fetchSentMessages();
   }, []);
 
+  // Fetch phone numbers from server
   const fetchNumbers = async () => {
     try {
-      const response = await axios.get('http://52.66.183.128:5000/api/phone/get-numbers');
+      const response = await axios.get(`${BASE_URL}/phone/get-numbers`);
       setNumbers(response.data.data);
     } catch (error) {
       console.error('Error fetching numbers:', error);
     }
   };
 
+  // Fetch sent messages from server
   const fetchSentMessages = async () => {
     try {
-      const response = await axios.get('http://52.66.183.128:5000/api/phone/messages');
+      const response = await axios.get(`${BASE_URL}/sent-message`);
       setSentMessages(response.data.data);
     } catch (error) {
-      console.error('Error fetching messages:', error);
+      console.error('Error fetching sent messages:', error);
     }
   };
 
+  // Add new phone number
   const handleAddNumber = async () => {
-    if (!newName || !newNumber) {
-      alert('Please enter name and number');
-      return;
-    }
+    if (!newName || !newNumber) return alert('Please enter name and number');
     try {
-      await axios.post('http://52.66.183.128:5000/api/phone/add-number', {
+      await axios.post(`${BASE_URL}/phone/add-number`, {
         name: newName,
         number: newNumber,
       });
@@ -63,26 +65,29 @@ const Message = () => {
       setNewName('');
       setNewNumber('');
     } catch (error) {
-      console.error('Add number error:', error);
+      console.error('Error adding number:', error);
     }
   };
 
+  // Delete phone number
   const handleDeleteNumber = async (id) => {
     if (!window.confirm('Delete this number?')) return;
     try {
-      await axios.delete(`http://52.66.183.128:5000/api/phone/delete-number/${id}`);
+      await axios.delete(`${BASE_URL}/phone/delete-number/${id}`);
       fetchNumbers();
     } catch (error) {
       console.error('Error deleting number:', error);
     }
   };
 
+  // Toggle number selection
   const handleSelectNumber = (number) => {
     setSelectedNumbers((prev) =>
       prev.includes(number) ? prev.filter((n) => n !== number) : [...prev, number]
     );
   };
 
+  // Select or deselect all numbers
   const handleSelectAll = () => {
     setSelectedNumbers(
       selectedNumbers.length === numbers.length
@@ -91,48 +96,46 @@ const Message = () => {
     );
   };
 
+  // Send or update message
   const handleSendMessage = async () => {
-    if (!message.trim()) {
-      alert('Enter a message.');
-      return;
-    }
-    if (selectedNumbers.length === 0) {
-      alert('Select at least one number.');
-      return;
-    }
+    if (!message.trim()) return alert('Please enter a message.');
+    if (selectedNumbers.length === 0) return alert('Select at least one number.');
+
     try {
       if (editMessageId) {
-        await axios.put(`http://52.66.183.128:5000/api/phone/update-message/${editMessageId}`, {
+        await axios.put(`${BASE_URL}/phone/update-message/${editMessageId}`, {
           message,
           numbers: selectedNumbers,
         });
-        alert('Message updated.');
+        alert('Message updated successfully.');
         setEditMessageId(null);
       } else {
-        await axios.post('http://52.66.183.128:5000/api/phone/send-message', {
+        await axios.post(`${BASE_URL}/phone/send-message`, {
           numbers: selectedNumbers,
           message,
         });
-        alert('Message sent!');
+        alert('Message sent successfully.');
       }
       setMessage('');
       setSelectedNumbers([]);
       fetchSentMessages();
     } catch (error) {
-      console.error('Send/update error:', error);
+      console.error('Error sending/updating message:', error);
     }
   };
 
+  // Populate message for editing
   const handleEditMessage = (msg) => {
     setEditMessageId(msg.id);
     setMessage(msg.message);
     setSelectedNumbers(JSON.parse(msg.numbers));
   };
 
+  // Delete sent message
   const handleDeleteMessage = async (id) => {
     if (!window.confirm('Delete this message?')) return;
     try {
-      await axios.delete(`http://52.66.183.128:5000/api/phone/delete-message/${id}`);
+      await axios.delete(`${BASE_URL}/phone/delete-message/${id}`);
       fetchSentMessages();
     } catch (error) {
       console.error('Error deleting message:', error);
@@ -153,6 +156,7 @@ const Message = () => {
         style={{ marginBottom: 20 }}
       />
 
+      {/* Add New Number Section */}
       <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
         <TextField
           label="Name"
@@ -167,7 +171,7 @@ const Message = () => {
         <Button variant="contained" onClick={handleAddNumber}>Add</Button>
       </div>
 
-      {/* ✅ Phone Number List with Delete */}
+      {/* Phone Number Table */}
       <Typography variant="h6">📞 Phone Numbers</Typography>
       <TableContainer component={Paper} sx={{ marginBottom: 3 }}>
         <Table>
@@ -206,6 +210,7 @@ const Message = () => {
         </Table>
       </TableContainer>
 
+      {/* Send/Update Button */}
       <Button
         variant="contained"
         color={editMessageId ? 'secondary' : 'primary'}
@@ -215,7 +220,7 @@ const Message = () => {
         {editMessageId ? 'Update Message' : 'Send Message'}
       </Button>
 
-      {/* ✅ Sent Messages Table with Edit/Delete */}
+      {/* Sent Messages Table */}
       <Typography variant="h6" gutterBottom>📨 Sent Messages</Typography>
       <TableContainer component={Paper}>
         <Table>
