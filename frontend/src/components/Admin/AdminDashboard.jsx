@@ -62,11 +62,11 @@ const AdminDashboard = () => {
         noticesRes,
         activityRes,
       ] = await Promise.all([
-        fetch("http://localhost:5000/api/users/count"),
-        fetch("http://localhost:5000/api/farmers/count"),
-        fetch("http://localhost:5000/api/complaints/count"),
-        fetch("http://localhost:5000/api/notices/count"),
-        fetch("http://localhost:5000/api/recent-activities"),
+        fetch("http://52.66.183.128:5000/api/users/count"),
+        fetch("http://52.66.183.128:5000/api/farmers/count"),
+        fetch("http://52.66.183.128:5000/api/complaints/count"),
+        fetch("http://52.66.183.128:5000/api/notices/count"),
+        fetch("http://52.66.183.128:5000/api/recent-activities"),
       ]);
 
       const [users, farmers, complaints, notices, activities] = await Promise.all([

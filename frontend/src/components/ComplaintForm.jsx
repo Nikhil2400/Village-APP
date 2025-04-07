@@ -23,7 +23,7 @@ const ComplaintForm = () => {
     if (formData.file) form.append('file', formData.file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/complaints/add', form);
+      const res = await axios.post('http://52.66.183.128:5000/api/complaints/add', form);
       alert(res.data.message);
       setFormData({ name: '', phone: '', complaint: '', file: null });
       setSubmitted(true);

@@ -13,7 +13,7 @@ const LandingPage = () => {
   const [announcements, setAnnouncements] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/announcements")
+    axios.get("http://52.66.183.128:5000/api/announcements")
       .then((res) => setAnnouncements(res.data))
       .catch((err) => console.error("❌ Announcement fetch error:", err));
   }, []);

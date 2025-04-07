@@ -9,7 +9,7 @@ function Tourism() {
     const [selectedPlace, setSelectedPlace] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/tourism/places")
+        axios.get("http://52.66.183.128:5000/api/tourism/places")
             .then((res) => {
                 setPlaces(res.data);
                 setLoading(false);

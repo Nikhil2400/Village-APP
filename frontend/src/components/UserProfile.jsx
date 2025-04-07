@@ -17,7 +17,7 @@ const UserProfile = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/user/reset-password', {
+      const response = await fetch('http://52.66.183.128:5000/user/reset-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

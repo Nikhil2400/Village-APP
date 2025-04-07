@@ -10,13 +10,13 @@ const Calendar = () => {
     const [description, setDescription] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/events')
+        axios.get('http://52.66.183.128:5000/api/events')
             .then(res => setEvents(res.data))
             .catch(error => console.error("Error fetching events:", error));
     }, []);
 
     const addEvent = () => {
-        axios.post('http://localhost:5000/api/admin/events', { title, date, description }) 
+        axios.post('http://52.66.183.128:5000/api/admin/events', { title, date, description }) 
             .then((res) => {
                 alert('Event added successfully!');
                 setEvents([...events, { id: res.data.eventId, title, date, description }]);
@@ -26,7 +26,7 @@ const Calendar = () => {
     
 
     const deleteEvent = (id) => {
-        axios.delete(`http://localhost:5000/api/admin/events/${id}`)
+        axios.delete(`http://52.66.183.128:5000/api/admin/events/${id}`)
             .then(() => {
                 alert('Event deleted!');
                 window.location.reload();

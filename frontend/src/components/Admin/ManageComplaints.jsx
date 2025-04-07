@@ -11,7 +11,7 @@ const ManageComplaints = () => {
 
   const fetchComplaints = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/complaints');
+      const res = await axios.get('http://52.66.183.128:5000/api/complaints');
       setComplaints(res.data);
     } catch (error) {
       console.error('Error:', error);
@@ -20,7 +20,7 @@ const ManageComplaints = () => {
 
   const deleteComplaint = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/complaints/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/complaints/${id}`);
       fetchComplaints();
     } catch (error) {
       console.error('Error:', error);
@@ -47,7 +47,7 @@ const ManageComplaints = () => {
               <TableCell>{c.phone}</TableCell>
               <TableCell>{c.complaint}</TableCell>
               <TableCell>
-                {c.file && <a href={`http://localhost:5000/uploads/${c.file}`} target="_blank" rel="noopener noreferrer">View File</a>}
+                {c.file && <a href={`http://52.66.183.128:5000/uploads/${c.file}`} target="_blank" rel="noopener noreferrer">View File</a>}
               </TableCell>
               <TableCell>
                 <Button color="error" onClick={() => deleteComplaint(c.id)}>Delete</Button>

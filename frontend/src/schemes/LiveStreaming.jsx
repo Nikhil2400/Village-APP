@@ -9,7 +9,7 @@ const LiveStreaming = () => {
 
     useEffect(() => {
         const fetchStream = () => {
-            axios.get('http://localhost:5000/api/get-streaming-option')
+            axios.get('http://52.66.183.128:5000/api/get-streaming-option')
                 .then(res => {
                     setStreamData(res.data);
                     setLoading(false);

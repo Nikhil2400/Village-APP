@@ -27,7 +27,7 @@ const NoticeManagement = () => {
 
   const fetchNotices = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/notice/get-notices');
+      const response = await axios.get('http://52.66.183.128:5000/api/notice/get-notices');
       setNotices(response.data.data || []);
     } catch (error) {
       console.error('Error fetching notices:', error.message);
@@ -46,9 +46,9 @@ const NoticeManagement = () => {
       if (file) formData.append('file', file);
 
       if (editId) {
-        await axios.put(`http://localhost:5000/api/notice/update-notice/${editId}`, formData);
+        await axios.put(`http://52.66.183.128:5000/api/notice/update-notice/${editId}`, formData);
       } else {
-        await axios.post('http://localhost:5000/api/notice/add-notice', formData);
+        await axios.post('http://52.66.183.128:5000/api/notice/add-notice', formData);
       }
 
       fetchNotices(); // ✅ Refresh notices immediately
@@ -61,7 +61,7 @@ const NoticeManagement = () => {
   // ✅ Delete Notice
   const deleteNotice = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/notice/delete-notice/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/notice/delete-notice/${id}`);
       fetchNotices(); // ✅ Refresh notices immediately
     } catch (error) {
       console.error('Error deleting notice:', error.message);

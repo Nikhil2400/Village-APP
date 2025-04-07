@@ -13,7 +13,7 @@ const Login = ({ setUser, setIsAdmin }) => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/login', { email, password, role });
+      const res = await axios.post('http://52.66.183.128:5000/api/login', { email, password, role });
 
       if (res.data.success) {
         const loggedInUser = res.data.user;

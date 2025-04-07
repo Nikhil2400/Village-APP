@@ -33,7 +33,7 @@ const Message = () => {
 
   const fetchNumbers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/phone/get-numbers');
+      const response = await axios.get('http://52.66.183.128:5000/api/phone/get-numbers');
       setNumbers(response.data.data);
     } catch (error) {
       console.error('Error fetching numbers:', error);
@@ -42,7 +42,7 @@ const Message = () => {
 
   const fetchSentMessages = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/phone/messages');
+      const response = await axios.get('http://52.66.183.128:5000/api/phone/messages');
       setSentMessages(response.data.data);
     } catch (error) {
       console.error('Error fetching messages:', error);
@@ -55,7 +55,7 @@ const Message = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:5000/api/phone/add-number', {
+      await axios.post('http://52.66.183.128:5000/api/phone/add-number', {
         name: newName,
         number: newNumber,
       });
@@ -70,7 +70,7 @@ const Message = () => {
   const handleDeleteNumber = async (id) => {
     if (!window.confirm('Delete this number?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/phone/delete-number/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/phone/delete-number/${id}`);
       fetchNumbers();
     } catch (error) {
       console.error('Error deleting number:', error);
@@ -102,14 +102,14 @@ const Message = () => {
     }
     try {
       if (editMessageId) {
-        await axios.put(`http://localhost:5000/api/phone/update-message/${editMessageId}`, {
+        await axios.put(`http://52.66.183.128:5000/api/phone/update-message/${editMessageId}`, {
           message,
           numbers: selectedNumbers,
         });
         alert('Message updated.');
         setEditMessageId(null);
       } else {
-        await axios.post('http://localhost:5000/api/phone/send-message', {
+        await axios.post('http://52.66.183.128:5000/api/phone/send-message', {
           numbers: selectedNumbers,
           message,
         });
@@ -132,7 +132,7 @@ const Message = () => {
   const handleDeleteMessage = async (id) => {
     if (!window.confirm('Delete this message?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/phone/delete-message/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/phone/delete-message/${id}`);
       fetchSentMessages();
     } catch (error) {
       console.error('Error deleting message:', error);

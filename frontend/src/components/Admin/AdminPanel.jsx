@@ -9,7 +9,7 @@ const AdminPanel = () => {
   const [donations, setDonations] = useState({});
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/donations")
+    axios.get("http://52.66.183.128:5000/api/donations")
       .then(res => {
         const fetchedDonations = res.data.reduce((acc, item) => {
           acc[item.donation_type] = item.amount;
@@ -33,7 +33,7 @@ const AdminPanel = () => {
       return;
     }
 
-    axios.post("http://localhost:5000/api/donations/set", { donation_type: donationType, amount })
+    axios.post("http://52.66.183.128:5000/api/donations/set", { donation_type: donationType, amount })
       .then(() => {
         toast.success("Donation amount updated!");
         setDonations(prev => ({ ...prev, [donationType]: amount }));

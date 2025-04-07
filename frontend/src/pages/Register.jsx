@@ -35,7 +35,7 @@ const Register = () => {
 
     try {
       console.log('➡️ Registering user:', formData);
-      const res = await axios.post('http://localhost:5000/api/register', formData);
+      const res = await axios.post('http://52.66.183.128:5000/api/register', formData);
 
       if (res.data.success) {
         console.log('✅ Registration successful:', res.data);

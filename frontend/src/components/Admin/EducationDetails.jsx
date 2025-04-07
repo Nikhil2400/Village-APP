@@ -24,7 +24,7 @@ const EducationDetails = () => {
 
   const fetchEducation = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/education/admin/list");
+      const res = await axios.get("http://52.66.183.128:5000/api/education/admin/list");
       if (res.data) setEducationList(res.data);
     } catch (error) {
       console.error("Error fetching education data:", error);
@@ -48,10 +48,10 @@ const EducationDetails = () => {
 
     try {
       if (editingId) {
-        await axios.post(`http://localhost:5000/api/education/admin/update/${editingId}`, submitForm);
+        await axios.post(`http://52.66.183.128:5000/api/education/admin/update/${editingId}`, submitForm);
         alert("Education updated");
       } else {
-        await axios.post("http://localhost:5000/api/education/admin/add", submitForm);
+        await axios.post("http://52.66.183.128:5000/api/education/admin/add", submitForm);
         alert("Education added");
       }
 
@@ -88,7 +88,7 @@ const EducationDetails = () => {
     if (!window.confirm("Are you sure you want to delete this entry?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/education/admin/delete/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/education/admin/delete/${id}`);
       alert("Education entry deleted");
       fetchEducation();
     } catch (error) {
@@ -145,14 +145,14 @@ const EducationDetails = () => {
 
               <div className="gallery">
                 {gallery.images.map((img, i) => (
-                  <img key={i} src={`http://localhost:5000/uploads/${img}`} alt="img" width="150" />
+                  <img key={i} src={`http://52.66.183.128:5000/uploads/${img}`} alt="img" width="150" />
                 ))}
               </div>
 
               <div className="gallery">
                 {gallery.videos.map((vid, i) => (
                   <video key={i} controls width="200">
-                    <source src={`http://localhost:5000/uploads/${vid}`} />
+                    <source src={`http://52.66.183.128:5000/uploads/${vid}`} />
                   </video>
                 ))}
               </div>

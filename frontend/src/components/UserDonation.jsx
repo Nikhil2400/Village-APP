@@ -19,7 +19,7 @@ const UserDonation = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/donations")
+      .get("http://52.66.183.128:5000/api/donations")
       .then((res) => {
         const fetchedData = res.data.reduce((acc, item) => {
           acc[item.donation_type] = item.amount;
@@ -43,7 +43,7 @@ const UserDonation = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/create-order", {
+      const response = await axios.post("http://52.66.183.128:5000/api/create-order", {
         name,
         phone,
         donation_type: selectedDonation,
@@ -63,7 +63,7 @@ const UserDonation = () => {
             setTransactionId(response.razorpay_payment_id);
             setShowReceiptButton(true); // Show receipt button after payment
 
-            await axios.post("http://localhost:5000/api/payment-success", {
+            await axios.post("http://52.66.183.128:5000/api/payment-success", {
               name,
               phone,
               donation_type: selectedDonation,

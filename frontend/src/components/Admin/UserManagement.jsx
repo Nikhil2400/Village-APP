@@ -11,7 +11,7 @@ const UserManagement = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users');
+      const res = await axios.get('http://52.66.183.128:5000/api/users');
       setUsers(res.data);
     } catch (error) {
       console.error('Error fetching users:', error);
@@ -20,7 +20,7 @@ const UserManagement = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/users/${id}`);
       fetchUsers();
     } catch (error) {
       console.error('Error deleting user:', error);

@@ -10,20 +10,20 @@ const UpdateGramSabha = () => {
     }, []);
 
     const fetchData = () => {
-        axios.get("http://localhost:5000/api/gram-sabha")
+        axios.get("http://52.66.183.128:5000/api/gram-sabha")
             .then(res => setData(res.data))
             .catch(err => console.log(err));
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:5000/api/gram-sabha/add", form)
+        axios.post("http://52.66.183.128:5000/api/gram-sabha/add", form)
             .then(() => { fetchData(); setForm({ name: "", date: "", time: "", description: "" }); })
             .catch(err => console.log(err));
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/api/gram-sabha/delete/${id}`)
+        axios.delete(`http://52.66.183.128:5000/api/gram-sabha/delete/${id}`)
             .then(() => fetchData())
             .catch(err => console.log(err));
     };

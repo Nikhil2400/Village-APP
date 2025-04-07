@@ -11,7 +11,7 @@ const FarmerDashboard = () => {
 
   const fetchFarmers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/farmer/get');
+      const response = await axios.get('http://52.66.183.128:5000/api/farmer/get');
       setFarmers(response.data.data || []);
     } catch (error) {
       console.error('Error fetching farmers:', error);
@@ -21,7 +21,7 @@ const FarmerDashboard = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this farmer?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/farmer/delete/${id}`);
+        await axios.delete(`http://52.66.183.128:5000/api/farmer/delete/${id}`);
         fetchFarmers();
       } catch (error) {
         console.error('Error deleting farmer:', error);
@@ -72,12 +72,12 @@ const FarmerDashboard = () => {
                   <td>
                     {farmer.govId ? (
                       <a
-                        href={`http://localhost:5000/uploads/${farmer.govId}`}
+                        href={`http://52.66.183.128:5000/uploads/${farmer.govId}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`http://localhost:5000/uploads/${farmer.govId}`}
+                          src={`http://52.66.183.128:5000/uploads/${farmer.govId}`}
                           alt={`Gov ID of ${farmer.name}`}
                           className="preview-img"
                         />
@@ -89,12 +89,12 @@ const FarmerDashboard = () => {
                   <td>
                     {farmer.govId2 ? (
                       <a
-                        href={`http://localhost:5000/uploads/${farmer.govId2}`}
+                        href={`http://52.66.183.128:5000/uploads/${farmer.govId2}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`http://localhost:5000/uploads/${farmer.govId2}`}
+                          src={`http://52.66.183.128:5000/uploads/${farmer.govId2}`}
                           alt={`Gov ID 2 of ${farmer.name}`}
                           className="preview-img"
                         />
@@ -106,12 +106,12 @@ const FarmerDashboard = () => {
                   <td>
                     {farmer.photo ? (
                       <a
-                        href={`http://localhost:5000/uploads/${farmer.photo}`}
+                        href={`http://52.66.183.128:5000/uploads/${farmer.photo}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`http://localhost:5000/uploads/${farmer.photo}`}
+                          src={`http://52.66.183.128:5000/uploads/${farmer.photo}`}
                           alt={`Photo of ${farmer.name}`}
                           className="preview-img"
                         />

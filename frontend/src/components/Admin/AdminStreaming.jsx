@@ -14,7 +14,7 @@ const AdminStreaming = ({ socket }) => {
 
     const fetchStreams = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/get-streams');
+            const response = await axios.get('http://52.66.183.128:5000/api/get-streams');
             setStreams(response.data);
         } catch (error) {
             console.error('Error fetching streams', error);
@@ -25,9 +25,9 @@ const AdminStreaming = ({ socket }) => {
         try {
             const streamData = { option, stream_url: streamUrl, is_live: isLive };
             if (editingId) {
-                await axios.put(`http://localhost:5000/api/update-stream/${editingId}`, streamData);
+                await axios.put(`http://52.66.183.128:5000/api/update-stream/${editingId}`, streamData);
             } else {
-                await axios.post('http://localhost:5000/api/set-streaming-option', streamData);
+                await axios.post('http://52.66.183.128:5000/api/set-streaming-option', streamData);
             }
             alert('Live Stream Updated!');
             fetchStreams();
@@ -50,7 +50,7 @@ const AdminStreaming = ({ socket }) => {
     const handleDelete = async (id) => {
         if (!window.confirm('Are you sure you want to delete this stream?')) return;
         try {
-            await axios.delete(`http://localhost:5000/api/delete-stream/${id}`);
+            await axios.delete(`http://52.66.183.128:5000/api/delete-stream/${id}`);
             alert('Stream Deleted!');
             fetchStreams();
         } catch (error) {
@@ -60,7 +60,7 @@ const AdminStreaming = ({ socket }) => {
 
     const toggleLive = async (id, currentStatus) => {
         try {
-            await axios.put(`http://localhost:5000/api/toggle-live/${id}`, { is_live: !currentStatus });
+            await axios.put(`http://52.66.183.128:5000/api/toggle-live/${id}`, { is_live: !currentStatus });
             fetchStreams();
         } catch (error) {
             console.error('Error toggling live stream', error);

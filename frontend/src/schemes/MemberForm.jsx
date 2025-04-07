@@ -41,7 +41,7 @@ const MemberForm = () => {
     });
 
     try {
-      await axios.post("http://localhost:5000/api/members", formDataToSend);
+      await axios.post("http://52.66.183.128:5000/api/members", formDataToSend);
       toast.success("सदस्य यशस्वीरित्या जोडले गेले!");
       setFormData({
         fullName: "",

@@ -9,7 +9,7 @@ const DigitalCalendar = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/events')
+        axios.get('http://52.66.183.128:5000/api/events')
             .then(res => setEvents(res.data))
             .catch(error => console.error("घटनांची माहिती आणताना त्रुटी:", error));
     }, []);

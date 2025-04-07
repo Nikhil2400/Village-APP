@@ -14,7 +14,7 @@ const Notice = () => {
 
   const fetchNotices = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/notice/get-notices');
+      const response = await axios.get('http://52.66.183.128:5000/api/notice/get-notices');
       setNotices(response.data.data || []);
     } catch (error) {
       console.error('सूचना मिळवताना त्रुटी:', error.message);

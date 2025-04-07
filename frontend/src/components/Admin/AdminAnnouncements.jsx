@@ -14,7 +14,7 @@ const AdminAnnouncements = () => {
 
   // Fetch Announcements
   useEffect(() => {
-    axios.get("http://localhost:5000/api/announcements")
+    axios.get("http://52.66.183.128:5000/api/announcements")
       .then((res) => setAnnouncements(res.data))
       .catch((err) => console.error("❌ Fetch Error:", err.response?.data || err.message));
   }, []);
@@ -26,13 +26,13 @@ const AdminAnnouncements = () => {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/announcements/${editId}`, { message });
+        await axios.put(`http://52.66.183.128:5000/api/announcements/${editId}`, { message });
         setAnnouncements(
           announcements.map((a) => a.id === editId ? { id: editId, message } : a)
         );
         setEditId(null);
       } else {
-        const res = await axios.post("http://localhost:5000/api/announcements", { message });
+        const res = await axios.post("http://52.66.183.128:5000/api/announcements", { message });
         setAnnouncements([...announcements, { id: res.data.insertId, message }]);
       }
       setMessage("");
@@ -44,7 +44,7 @@ const AdminAnnouncements = () => {
   // Delete Announcement
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/announcements/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/announcements/${id}`);
       setAnnouncements(announcements.filter((a) => a.id !== id));
     } catch (err) {
       console.error("❌ Delete Error:", err.response?.data || err.message);

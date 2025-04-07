@@ -13,7 +13,7 @@ const UpdateContact = () => {
 
   const fetchContacts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/contact');
+      const response = await axios.get('http://52.66.183.128:5000/api/contact');
       setContacts(response.data);
     } catch (error) {
       console.error('Error fetching contacts:', error);
@@ -23,7 +23,7 @@ const UpdateContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/contact/add', contact);
+      await axios.post('http://52.66.183.128:5000/api/contact/add', contact);
       fetchContacts();
       setContact({ name: '', email: '', phone: '', address: '' });
       alert('Contact added successfully');
@@ -34,7 +34,7 @@ const UpdateContact = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/contact/delete/${id}`);
+      await axios.delete(`http://52.66.183.128:5000/api/contact/delete/${id}`);
       fetchContacts();
       alert('Contact deleted successfully');
     } catch (error) {

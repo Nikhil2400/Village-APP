@@ -11,7 +11,7 @@ const Education = () => {
 
   const fetchEducationData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/education/admin/list");
+      const res = await axios.get("http://52.66.183.128:5000/api/education/admin/list");
       if (res.data) setEducationList(res.data);
     } catch (err) {
       console.error("Error fetching education data", err);
@@ -42,7 +42,7 @@ const Education = () => {
                 <h4>📸 Photos</h4>
                 <div className="gallery-flex">
                   {gallery.images.map((img, i) => (
-                    <img key={i} src={`http://localhost:5000/uploads/${img}`} alt="Education" />
+                    <img key={i} src={`http://52.66.183.128:5000/uploads/${img}`} alt="Education" />
                   ))}
                 </div>
               </div>
@@ -54,7 +54,7 @@ const Education = () => {
                 <div className="gallery-flex">
                   {gallery.videos.map((vid, i) => (
                     <video key={i} controls>
-                      <source src={`http://localhost:5000/uploads/${vid}`} type="video/mp4" />
+                      <source src={`http://52.66.183.128:5000/uploads/${vid}`} type="video/mp4" />
                     </video>
                   ))}
                 </div>

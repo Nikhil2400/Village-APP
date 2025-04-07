@@ -7,7 +7,7 @@ const GramSabha = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/gram-sabha")
+        axios.get("http://52.66.183.128:5000/api/gram-sabha")
             .then(res => setData(res.data))
             .catch(err => console.log(err));
     }, []);

@@ -7,7 +7,7 @@ const ContactUs = () => {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/contact')
+    axios.get('http://52.66.183.128:5000/api/contact')
       .then((response) => {
         setContacts(response.data);
       })
