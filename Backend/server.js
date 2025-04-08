@@ -24,7 +24,11 @@ const streamingRoutes = require("./routes/streamingRoutes");
 const app = express();
 
 // ✅ Middleware
-app.use(cors()); 
+app.use(cors({
+  origin: 'https://village-app-gamma.vercel.app/',
+  credentials: true
+}));
+
 app.use(express.json()); // ✅ Recommended: Use express.json() instead of bodyParser.json()
 // app.use(bodyParser.urlencoded({ extended: true })); // ✅ Ensures form-data support
 // app.use(fileUpload()); // ✅ Middleware for handling file uploads
