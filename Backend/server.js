@@ -25,7 +25,7 @@ const app = express();
 
 // ✅ Middleware
 app.use(cors({
-  origin: 'https://village-app-gamma.vercel.app/',
+  origin: 'https://nikhil2400.github.io',
   credentials: true
 }));
 
