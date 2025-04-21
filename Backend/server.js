@@ -74,5 +74,9 @@ app.get("/", (req, res) => {
     res.send("🚀 Village App Backend is Running ✅");
   });
 
+// const PORT = 5000;
+// app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
 const PORT = 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on http://65.2.37.249:${PORT}`);
+});
